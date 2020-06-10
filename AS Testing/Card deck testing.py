@@ -4,6 +4,7 @@ from random import shuffle
 
 stack_1 = []
 stack_2 = []
+reserve_stack = []
 
 
 
@@ -51,12 +52,15 @@ def colour_sort(deck):
 
 def stacker(deck):
     for i in range(len(deck)):
-        if i%2==0:
+        if i == 0 or i == 1:
+            reserve_stack.append(deck[i])        
+        
+        elif i%2==0:
             stack_1.append(deck[i])
         else: 
             stack_2.append(deck[i])
         
-    print(stack_1,"\n",stack_2)    
+    print(stack_1,"\n",stack_2, "\n", reserve_stack)    
     
 
 
@@ -72,12 +76,17 @@ button()
 #card_deck = ["-1H","-1D","1C","1S","9S","-9H","13S","12D"]
 #stack_1 = []
 #stack_2 = []
+#reserve_stack = []
 
 #for i in range(len(card_deck)):
-    #if i%2==0:
+    
+    #if i == 0 or i == 1:
+        #reserve_stack.append(card_deck[i])
+    
+    #elif i%2==0:
         #stack_1.append(card_deck[i])
     #else: 
         #stack_2.append(card_deck[i])
     
-#print(stack_1, "\n", stack_2)
+#print(stack_1, "\n", stack_2, "\n", reserve_stack)
     
