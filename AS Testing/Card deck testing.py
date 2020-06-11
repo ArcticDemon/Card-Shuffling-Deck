@@ -100,9 +100,43 @@ from random import shuffle
 
 x = {"red":[-1,-2,-3,-4,-5], "black":[1,2,3,4,5]}
 cards = []
-for key in x: 
-    cards = x[key]
-    print(key, cards)
+
+
+def maths():
+    check = 0 
+    inputs = 0     
     
-    for i in cards: 
-        print(i)
+
+
+    for key in x: 
+        cards = x[key]
+        print(key, cards)
+        
+        
+        for i in cards: 
+            choice = input("Chose a number: ")
+            a = (int(choice))
+            if a in cards:
+                check += a 
+                inputs += 1
+                
+                if inputs%2==0:
+                    if check == 0:
+                        print("nice job got it")
+                        print(check)
+                    
+                    else:
+                        print("we didn't get it")
+                        print(check)
+                        pass
+                    
+                    
+                    
+                else:
+                    pass
+                break 
+            else:
+                print("chose a number from the range")
+    
+
+maths()
